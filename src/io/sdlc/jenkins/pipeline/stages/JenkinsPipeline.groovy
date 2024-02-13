@@ -9,7 +9,7 @@ class JenkinsPipeline {
     }
 
 
-    def void build() {
+    def void call() {
         println("Building the project")
     }
 
