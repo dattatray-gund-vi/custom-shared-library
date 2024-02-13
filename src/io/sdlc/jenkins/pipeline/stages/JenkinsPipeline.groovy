@@ -1,6 +1,6 @@
 package io.sdlc.jenkins.pipeline.stages
 
-def build() {
+static def build() {
 //    stage('Build') {
 //        sh "echo 'Building the project'"
 //    }
