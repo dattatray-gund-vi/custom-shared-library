@@ -1,7 +1,7 @@
 package io.sdlc.jenkins.pipeline.stages
 
 class JenkinsPipeline {
-    def build() {
+    def call() {
         println("Building the project")
     }
 }
