@@ -3,9 +3,6 @@ import io.sdlc.jenkins.pipeline.stages.JenkinsPipeline
 
 def call() {
 
-    def pipeline = new JenkinsPipeline(this)
-
-
     pipeline {
         agent any
 
@@ -13,7 +10,6 @@ def call() {
 
             stage('Build') {
                 steps {
-                   pipeline.call()
                     sh "echo 'Building the project'"
                 }
             }
