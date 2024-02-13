@@ -12,7 +12,7 @@ def call() {
             stage('Build') {
                 steps {
                     //sh "echo 'Building the project'"
-                    pipeline.build()
+                    //pipeline.build()
                 }
             }
 
@@ -25,6 +25,7 @@ def call() {
             stage('Sonar Scan') {
                 steps {
                     sh "echo 'Running SonarQube scan'"
+                    pipeline.build()
                 }
             }
 
