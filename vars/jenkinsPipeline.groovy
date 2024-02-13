@@ -13,7 +13,7 @@ def call() {
                     //sh "echo 'Building the project'"
                     script {
                         def jenkinsPipeline = new JenkinsPipeline(this)
-                        jenkinsPipeline.call(this)
+                        jenkinsPipeline.call()
                     }
                 }
             }
