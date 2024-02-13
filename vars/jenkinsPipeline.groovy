@@ -2,9 +2,6 @@ import io.sdlc.jenkins.pipeline.stages.JenkinsPipeline
 
 def call() {
 
-    @NonCPS
-    def pipeline = new JenkinsPipeline()
-
     pipeline {
         agent any
 
@@ -26,7 +23,7 @@ def call() {
             stage('Sonar Scan') {
                 steps {
                     sh "echo 'Running SonarQube scan'"
-                    pipeline.build()
+//                    pipeline.build()
                 }
             }
 
