@@ -8,13 +8,13 @@ def call() {
         agent any
 
         stages {
-            pipeline.build()
-//            stage('Build') {
-//                steps {
-//                    //sh "echo 'Building the project'"
-//                    pipeline.build()
-//                }
-//            }
+
+            stage('Build') {
+                steps {
+                    //sh "echo 'Building the project'"
+                    pipeline.build()
+                }
+            }
 
             stage('Test') {
                 steps {
