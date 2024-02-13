@@ -2,13 +2,16 @@ import io.sdlc.jenkins.pipeline.stages.JenkinsPipeline
 
 def call() {
 
+    def pipeline = new JenkinsPipeline()
+
     pipeline {
         agent any
 
         stages {
             stage('Build') {
                 steps {
-                    sh "echo 'Building the project'"
+                    //sh "echo 'Building the project'"
+                    pipeline.build()
                 }
             }
 
