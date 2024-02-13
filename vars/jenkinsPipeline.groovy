@@ -3,7 +3,7 @@ import io.sdlc.jenkins.pipeline.stages.JenkinsPipeline
 
 def call() {
 
-    def pipeline = new JenkinsPipeline()
+    def pipeline = new JenkinsPipeline(this)
 
 
     pipeline {
