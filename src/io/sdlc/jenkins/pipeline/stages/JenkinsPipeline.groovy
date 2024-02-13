@@ -1,7 +1,14 @@
 package io.sdlc.jenkins.pipeline.stages
 
 class JenkinsPipeline {
-    def call(def constext) {
+
+    def csScriptContext
+
+    JenkinsPipeline(def csScriptContext) {
+        this.csScriptContext = csScriptContext
+    }
+
+    def call() {
         println("Building the project")
     }
 
