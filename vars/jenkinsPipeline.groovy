@@ -1,8 +1,10 @@
 import io.sdlc.jenkins.pipeline.stages.JenkinsPipeline
 
+
 def call() {
 
-def pipeline = new JenkinsPipeline()
+    def pipeline = new JenkinsPipeline()
+
 
     pipeline {
         agent any
@@ -11,6 +13,7 @@ def pipeline = new JenkinsPipeline()
 
             stage('Build') {
                 steps {
+                    pipeline.build()
                     sh "echo 'Building the project'"
                 }
             }
@@ -24,13 +27,11 @@ def pipeline = new JenkinsPipeline()
             stage('Sonar Scan') {
                 steps {
                     sh "echo 'Running SonarQube scan'"
-//                    pipeline.build()
                 }
             }
 
             stage('Deploy') {
                 steps {
-                    // Your deployment steps here
                     sh "echo 'Deploying the project'"
                 }
             }
