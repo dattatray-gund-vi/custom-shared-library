@@ -13,7 +13,7 @@ def call() {
 
             stage('Build') {
                 steps {
-                    pipeline.build()
+//                    pipeline.build()
                     sh "echo 'Building the project'"
                 }
             }
