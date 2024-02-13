@@ -9,7 +9,7 @@ class JenkinsPipeline {
     }
 
 
-    def void call(def csScriptContext) {
+    def void call() {
         println("Building the project")
         csScriptContext.sh "echo 'Building the project'"
     }
