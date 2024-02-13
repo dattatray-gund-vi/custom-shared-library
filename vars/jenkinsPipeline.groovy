@@ -10,7 +10,11 @@ def call() {
 
             stage('Build') {
                 steps {
-                    sh "echo 'Building the project'"
+                    //sh "echo 'Building the project'"
+                    script {
+                        def jenkinsPipeline = new JenkinsPipeline(this)
+                        jenkinsPipeline.call(this)
+                    }
                 }
             }
 
@@ -32,44 +36,5 @@ def call() {
                 }
             }
         }
-
     }
-
-//    // Parse the passed parameters
-//    def config = [:]
-//    body.resolveStrategy = Closure.DELEGATE_FIRST
-//    body.delegate = config
-//    body()
-//
-//    def pipeline = new JenkinsPipeline()
-//
-//    pipeline {
-//        agent any
-//
-//        stages {
-//            stage('Build') {
-//                steps {
-//                    pipeline.build()
-//                }
-//            }
-//
-//            stage('Test') {
-//                steps {
-//                    pipeline.test()
-//                }
-//            }
-//
-//            stage('Sonar Scan') {
-//                steps {
-//                    pipeline.sonarScan()
-//                }
-//            }
-//
-//            stage('Deploy') {
-//                steps {
-//                    pipeline.deploy()
-//                }
-//            }
-//        }
-//    }
 }
