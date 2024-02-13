@@ -1,10 +1,10 @@
 package io.sdlc.jenkins.pipeline.stages
 
 static def build() {
-//    stage('Build') {
-//        sh "echo 'Building the project'"
-//    }
-    sh "echo 'Building the project'"
+    stage('Build') {
+        sh "echo 'Building the project'"
+    }
+//    sh "echo 'Building the project'"
 }
 
 def test() {
