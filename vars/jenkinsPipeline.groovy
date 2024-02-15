@@ -1,10 +1,12 @@
 import io.sdlc.jenkins.pipeline.stages.JenkinsPipeline
-import java.util.logging.Logger
+//import java.util.logging.Logger
+import jenkins.model.Jenkins
 
 def call() {
 
     def jenkinsPipeline = new JenkinsPipeline(this)
-    Logger logger = Logger.getLogger(getClass().getName())
+//    Logger logger = Logger.getLogger(getClass().getName())
+    def logger = Jenkins.instance.getLogger()
 
     pipeline {
         agent any
