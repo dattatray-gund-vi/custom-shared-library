@@ -20,8 +20,9 @@ def call() {
             stage('Checkout') {
                 steps {
                     echo 'Checking out the code'
-                    echo "$env"
-                    echo "$env.BRANCH_NAME"
+                    sh 'printenv'
+                    //echo "$env"
+                    //echo "$env.BRANCH_NAME"
 //                    echo "$BRANCH_NAME"
 //                    echo "$WORKSPACE"
                 }
