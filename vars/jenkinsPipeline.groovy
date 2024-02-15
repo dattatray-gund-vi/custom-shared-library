@@ -20,7 +20,8 @@ def call() {
 
             stage('Test') {
                 steps {
-                    sh "echo 'Testing the project'"
+                    //sh "echo 'Testing the project'"
+                    println("Testing the project")
                 }
             }
 
