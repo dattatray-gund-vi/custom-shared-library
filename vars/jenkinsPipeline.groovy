@@ -11,7 +11,9 @@ def call() {
     pipeline {
         agent any
 
-
+        options {
+            ansiColor('css')
+        }
 
         stages {
 
