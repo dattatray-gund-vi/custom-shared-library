@@ -21,10 +21,10 @@ def call() {
                        // info 'This is an info message'
 
                         // Print a warning message
-                        warning 'This is a warning message'
+                       // warning 'This is a warning message'
 
                         // Print a severe message
-                        error 'This is a severe message'
+                       // error 'This is a severe message'
                     }
                 }
             }
@@ -36,10 +36,10 @@ def call() {
                    // info 'This is an info message'
 
                     // Print a warning message
-                    warning 'This is a warning message'
+                   // warning 'This is a warning message'
 
                     // Print a severe message
-                    error 'This is a severe message'
+                    //error 'This is a severe message'
 
 
                 }
