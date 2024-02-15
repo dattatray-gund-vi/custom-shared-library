@@ -16,9 +16,9 @@ def call() {
             stage('Build') {
                 steps {
                     script {
-                       // jenkinsPipeline.call()
+                       jenkinsPipeline.call()
 
-                        info 'This is an info message'
+                       // info 'This is an info message'
 
                         // Print a warning message
                         warning 'This is a warning message'
@@ -33,7 +33,7 @@ def call() {
                 steps {
                     //sh "echo 'Testing the project'"
                     println("--------- Testing the project ---------")
-                    info 'This is an info message'
+                   // info 'This is an info message'
 
                     // Print a warning message
                     warning 'This is a warning message'
