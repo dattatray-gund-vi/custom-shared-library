@@ -17,15 +17,22 @@ def call() {
 
         stages {
 
+            stage('Checkout') {
+                steps {
+                    echo 'Checking out the code'
+                    echo "$env.BRANCH_NAME"
+                    echo "$BRANCH_NAME"
+                    echo "$WORKSPACE"
+                    echo "$env"
+                }
+            }
+
             stage('Build') {
                 steps {
                     script {
                        jenkinsPipeline.call()
 
-                        echo "$env.BRANCH_NAME"
-                        echo "$BRANCH_NAME"
-                        echo "$WORKSPACE"
-                        echo "$env"
+
 
 //                        echo '$env'
 
