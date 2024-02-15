@@ -15,6 +15,9 @@ def call() {
                 steps {
                     script {
                         jenkinsPipeline.call()
+                        logger.info("Hello, this is an informational message")
+                        logger.warning("This is a warning message")
+                        logger.severe("This is a severe message")
                     }
                 }
             }
@@ -24,9 +27,7 @@ def call() {
                     //sh "echo 'Testing the project'"
                     println("--------- Testing the project ---------")
 
-                    logger.info("Hello, this is an informational message")
-                    logger.warning("This is a warning message")
-                    logger.severe("This is a severe message")
+
                 }
             }
 
