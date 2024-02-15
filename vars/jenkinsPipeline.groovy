@@ -13,7 +13,7 @@ def call() {
             stage('Build') {
                 steps {
                     script {
-                        jenkinsPipeline()
+                        jenkinsPipeline.call()
                     }
                 }
             }
