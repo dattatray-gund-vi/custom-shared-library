@@ -12,7 +12,7 @@ def call() {
         agent any
 
         options {
-            ansiColor('css')
+            ansiColor('xterm')
         }
 
         stages {
