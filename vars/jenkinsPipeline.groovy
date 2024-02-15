@@ -6,7 +6,7 @@ def call() {
 
     def jenkinsPipeline = new JenkinsPipeline(this)
 //    Logger logger = Logger.getLogger(getClass().getName())
-    def logger = Jenkins.instance.getLogger()
+    def logger = Jenkins.instance.getLogger(getClass().getName())
 
     pipeline {
         agent any
