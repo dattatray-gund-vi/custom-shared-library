@@ -12,9 +12,8 @@ def call() {
 
             stage('Build') {
                 steps {
-                    //sh "echo 'Building the project'"
                     script {
-                        jenkinsPipeline.call()
+                        jenkinsPipeline()
                     }
                 }
             }

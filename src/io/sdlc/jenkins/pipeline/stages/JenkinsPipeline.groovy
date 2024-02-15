@@ -8,10 +8,8 @@ class JenkinsPipeline {
         this.csScriptContext = csScriptContext
     }
 
-
     def void call() {
         println("Building the project")
         csScriptContext.sh "echo 'Building the project'"
     }
-
 }
