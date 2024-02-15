@@ -11,6 +11,10 @@ def call() {
     pipeline {
         agent any
 
+        options {
+            ansiColor('xterm')
+        }
+
         stages {
 
             stage('Build') {
@@ -33,6 +37,7 @@ def call() {
                 steps {
                     //sh "echo 'Testing the project'"
                     println("--------- Testing the project ---------")
+                    echo '\033[34mHello\033[0m \033[33mcolorful\033[0m \033[35mworld!\033[0m'
                    // info 'This is an info message'
 
                     // Print a warning message
