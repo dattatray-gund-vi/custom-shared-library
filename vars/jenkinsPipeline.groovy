@@ -22,6 +22,10 @@ def call() {
                     script {
                        jenkinsPipeline.call()
 
+                        echo '$env'
+
+//                        readFile 'pom.xml'
+
                        // info 'This is an info message'
 
                         // Print a warning message
