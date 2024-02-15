@@ -16,10 +16,15 @@ def call() {
             stage('Build') {
                 steps {
                     script {
-                        jenkinsPipeline.call()
-                        info "Hello, this is an informational message"
-                        warning("This is a warning message")
-                        error("This is a severe message")
+                       // jenkinsPipeline.call()
+
+                        info 'This is an info message'
+
+                        // Print a warning message
+                        warning 'This is a warning message'
+
+                        // Print a severe message
+                        error 'This is a severe message'
                     }
                 }
             }
@@ -28,6 +33,13 @@ def call() {
                 steps {
                     //sh "echo 'Testing the project'"
                     println("--------- Testing the project ---------")
+                    info 'This is an info message'
+
+                    // Print a warning message
+                    warning 'This is a warning message'
+
+                    // Print a severe message
+                    error 'This is a severe message'
 
 
                 }
