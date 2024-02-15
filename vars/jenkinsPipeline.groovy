@@ -21,6 +21,7 @@ def call() {
                 steps {
                     echo 'Checking out the code'
                     sh 'printenv'
+                    ls "$WORKSPACE -la"
                     //echo "$env"
                     //echo "$env.BRANCH_NAME"
 //                    echo "$BRANCH_NAME"
