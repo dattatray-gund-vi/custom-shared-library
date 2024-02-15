@@ -1,12 +1,12 @@
 import io.sdlc.jenkins.pipeline.stages.JenkinsPipeline
 //import java.util.logging.Logger
-import jenkins.model.Jenkins
+//import jenkins.model.Jenkins//
 
 def call() {
 
     def jenkinsPipeline = new JenkinsPipeline(this)
 //    Logger logger = Logger.getLogger(getClass().getName())
-    def logger = Jenkins.instance.getLogger(getClass().getName())
+   // def logger = Jenkins.instance.getLogger(getClass().getName())
 
     pipeline {
         agent any
@@ -17,9 +17,9 @@ def call() {
                 steps {
                     script {
                         jenkinsPipeline.call()
-                        logger.info("Hello, this is an informational message")
-                        logger.warning("This is a warning message")
-                        logger.severe("This is a severe message")
+                        info "Hello, this is an informational message"
+                        warning("This is a warning message")
+                        error("This is a severe message")
                     }
                 }
             }
