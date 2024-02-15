@@ -25,6 +25,7 @@ def call() {
                         echo "$env.BRANCH_NAME"
                         echo "$BRANCH_NAME"
                         echo "$WORKSPACE"
+                        echo "$env"
 
 //                        echo '$env'
 
