@@ -22,7 +22,11 @@ def call() {
                     script {
                        jenkinsPipeline.call()
 
-                        echo '$env'
+                        echo '$env.BRANCH_NAME'
+                        echo '$BRANCH_NAME'
+                        echo '$WORKSPACE'
+
+//                        echo '$env'
 
 //                        readFile 'pom.xml'
 
