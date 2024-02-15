@@ -22,9 +22,9 @@ def call() {
                     script {
                        jenkinsPipeline.call()
 
-                        echo '$env.BRANCH_NAME'
-                        echo '$BRANCH_NAME'
-                        echo '$WORKSPACE'
+                        echo "$env.BRANCH_NAME"
+                        echo "$BRANCH_NAME"
+                        echo "$WORKSPACE"
 
 //                        echo '$env'
 
